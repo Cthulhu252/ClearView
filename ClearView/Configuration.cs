@@ -9,9 +9,6 @@ public class Configuration : IPluginConfiguration
 {
     public int Version { get; set; } = 0;
 
-    public bool IsConfigWindowMovable { get; set; }
-    public bool SomePropertyToBeSavedAndWithADefault { get; set; }
-
     public string DisplayTypeSelf { get; set; }
     public string DisplayTypeParty { get; set; }
     public string DisplayTypeAlliance { get; set; }

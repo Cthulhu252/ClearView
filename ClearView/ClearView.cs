@@ -1,4 +1,3 @@
-using ClearView.Windows;
 using CombatCursorContainment;
 using Dalamud.Game.ClientState.Conditions;
 using Dalamud.Game.Config;
@@ -18,19 +17,18 @@ namespace ClearView
         public ClearView(MainWindow mainWindow)
         {
             this.mainWindow = mainWindow;
-
-          
         }
 
         public static uint GetNamePlateNameTitleTypeSelf()
         {
-             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTitleTypeSelf.ToString());
-         }
+            return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTitleTypeSelf.ToString());
+        }
 
         internal static void SetNamePlateNameTitleTypeSelf(uint value)
         {
             Services.GameConfig.UiConfig.Set(UiConfigOption.NamePlateNameTitleTypeSelf.ToString(), value);
         }
+
         public static uint GetNamePlateNameTitleTypeParty()
         {
             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTitleTypeParty.ToString());
@@ -40,6 +38,7 @@ namespace ClearView
         {
             Services.GameConfig.UiConfig.Set(UiConfigOption.NamePlateNameTitleTypeParty.ToString(), value);
         }
+
         public static uint GetNamePlateNameTitleTypeAlliance()
         {
             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTitleTypeAlliance.ToString());
@@ -49,6 +48,7 @@ namespace ClearView
         {
             Services.GameConfig.UiConfig.Set(UiConfigOption.NamePlateNameTitleTypeAlliance.ToString(), value);
         }
+
         public static uint GetNamePlateNameTitleTypeOther()
         {
             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTitleTypeOther.ToString());
@@ -63,30 +63,37 @@ namespace ClearView
         {
             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTypeSelf.ToString());
         }
+
         internal static void SetNameNamePlateNameTypeSelf(uint value)
         {
             Services.GameConfig.UiConfig.Set(UiConfigOption.NamePlateNameTypeSelf.ToString(), value);
         }
+
         public static uint GetNamePlateNameTypeParty()
         {
             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTypeParty.ToString());
         }
+
         internal static void SetNameNamePlateNameTypeParty(uint value)
         {
             Services.GameConfig.UiConfig.Set(UiConfigOption.NamePlateNameTypeParty.ToString(), value);
         }
+
         public static uint GetNamePlateNameTypeAlliance()
         {
             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTypeAlliance.ToString());
         }
+
         internal static void SetNameNamePlateNameTypeAlliance(uint value)
         {
             Services.GameConfig.UiConfig.Set(UiConfigOption.NamePlateNameTypeAlliance.ToString(), value);
         }
+
         public static uint GetNamePlateNameTypeOther()
         {
             return Services.GameConfig.UiConfig.GetUInt(UiConfigOption.NamePlateNameTypeOther.ToString());
         }
+
         internal static void SetNameNamePlateNameTypeOther(uint value)
         {
             Services.GameConfig.UiConfig.Set(UiConfigOption.NamePlateNameTypeOther.ToString(), value);
@@ -104,14 +111,11 @@ namespace ClearView
             ClearView.SetNameNamePlateNameTypeParty(Storage.CombatNamePlateNameTypeParty);
             ClearView.SetNameNamePlateNameTypeAlliance(Storage.CombatNamePlateNameTypeAlliance);
             ClearView.SetNameNamePlateNameTypeOther(Storage.CombatNamePlateNameTypeOther);
-
-    
         }
 
         internal static void RestoreAll()
         {
             // Restores the values saved when plugin loaded
-            
             ClearView.SetNamePlateNameTitleTypeSelf(Storage.InitialNamePlateNameTitleTypeSelf);
             ClearView.SetNamePlateNameTitleTypeParty(Storage.InitialNamePlateNameTitleTypeParty);
             ClearView.SetNamePlateNameTitleTypeAlliance(Storage.InitialNamePlateNameTitleTypeAlliance);
@@ -121,9 +125,6 @@ namespace ClearView
             ClearView.SetNameNamePlateNameTypeParty(Storage.InitialNamePlateNameTypeParty);
             ClearView.SetNameNamePlateNameTypeAlliance(Storage.InitialNamePlateNameTypeAlliance);
             ClearView.SetNameNamePlateNameTypeOther(Storage.InitialNamePlateNameTypeOther);
-
-
-           
         }
 
         public static void OnConditionChange(ConditionFlag flag, bool value)
