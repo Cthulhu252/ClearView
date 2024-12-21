@@ -56,5 +56,7 @@ public class ConfigWindow : Window, IDisposable
             Configuration.IsConfigWindowMovable = movable;
             Configuration.Save();
         }
+
+       
     }
 }
