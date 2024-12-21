@@ -1,0 +1,13 @@
+{
+  "Author": "Cthulu",
+  "Name": "ClearView",
+  "Punchline": "Hides Titles and full names during combat",
+  "Description": "Hides player titles and sets names to initials when in combat",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "title",
+    "names",
+    "plugin",
+    "great old one"
+  ]
+}

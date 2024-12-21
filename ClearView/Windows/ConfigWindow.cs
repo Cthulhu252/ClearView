@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Numerics;
 using Dalamud.Interface.Windowing;
 using ImGuiNET;
 
-namespace SamplePlugin.Windows;
+namespace ClearView.Windows;
 
 public class ConfigWindow : Window, IDisposable
 {
@@ -46,6 +46,7 @@ public class ConfigWindow : Window, IDisposable
         {
             Configuration.SomePropertyToBeSavedAndWithADefault = configValue;
             // can save immediately on change, if you don't want to provide a "Save and Close" button
+            
             Configuration.Save();
         }
 
